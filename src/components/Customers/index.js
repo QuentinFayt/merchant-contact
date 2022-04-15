@@ -4,9 +4,12 @@ import Customer from "components/Customer";
 
 const Customers = () => {
     const customerList = Array.from({length:100},()=>({
-        id: Faker.random.uuid(),
+        id: Faker.datatype.uuid(),
         firstName : Faker.name.firstName(),
-        lastName : Faker.name.lastName()
+        lastName : Faker.name.lastName(),
+        phone : Faker.phone.phoneNumber('049#.###.###'),
+        avatar : Faker.image.avatar(),
+        job : Faker.name.jobTitle()
     }));
     return (
         <ul>
