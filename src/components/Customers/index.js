@@ -12,11 +12,11 @@ const Customers = () => {
         job : Faker.name.jobTitle()
     }));
     return (
-        <ul>
+        <div className="d-inline-flex flex-wrap justify-content-center">
             {customerList.map((customerData)=>(
-                <Customer data={customerData} key={customerData.id}/>
+                    <Customer data={customerData} key={customerData.id}/>
             ))}
-        </ul>
+        </div>
     );
 };
 
